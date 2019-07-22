@@ -19,15 +19,50 @@ function renderBookInShowPane(bookID, bookTitle) {
     showPanel.innerHTML = "";
     showPanel.appendChild(createHeader(bookTitle))
     getBook(bookID).then(book => {
+        console.log(book);
         showPanel.appendChild(createImg(book.img_url));
         showPanel.appendChild(createBookDescription(book.description));
         showPanel.appendChild(createBooksLikedUsers(book.users));
+        showPanel.appendChild(createBooksReadBookButton(bookID, showPanel, book.users, bookTitle));
     })
+}
+
+function addUserToReadBook(user) {
+    const showPanel = document.querySelector("#book-users-liked");
+    const newUserLI = document.createElement("li");
+    newUserLI.innerText = user.username;
+    showPanel.appendChild(newUserLI);
+}
+
+function createBooksReadBookButton(bookID, showPanel, users, title) {
+    const newButton = document.createElement("button");
+    newButton.innerText = "Read Book"
+    if (! (users.find(element => {return element.id === 1;}))) {
+        newButton.addEventListener('click', function readBookButtonClickHandler(event) {
+            users.push({id: 1, username: "pouros"});
+            fetch(`http://localhost:3000/books/${bookID}`, {
+                method: 'PATCH',
+                mode: 'cors',
+                body: JSON.stringify(users)
+            }).then(response => response.json()).then((response) => {
+                console.log(response);
+                // renderBookInShowPane(bookID, title);
+                addUserToReadBook({id: 1, username: "pouros"});
+                newButton.removeEventListener('click', readBookButtonClickHandler);
+                newButton.addEventListener('click', () => {alert("You read this already!")});
+            })
+        })
+    }
+    else {
+        newButton.addEventListener('click', () => {alert("You read this already!")})
+    }
+    return newButton;
 }
 
 
 function createBooksLikedUsers(bookUsers) {
     const newUsersList = document.createElement("ul");
+    newUsersList.id = "book-users-liked";
     newUsersList.innerText = "Users who like this book:"
     for(let i = 0; i < bookUsers.length; i++) {
         const newItem = document.createElement("li");
