@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
             if(e.target.innerText === "Like it"){
                 specificBook['users'].push(currentUser);
                 booksShow.innerHTML = renderBooks([specificBook]);
-                changeLikes(e.target.daraset.id, currentUser, specificBook);
+                changeLikes(e.target.dataset.id, currentUser, specificBook);
             } else {
                 e.target.innerHTML === "Unlike it"
                 let newUser = specificBook['users'].filter(user => {
