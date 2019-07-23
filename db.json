@@ -13,6 +13,34 @@
         {
           "id": 8,
           "username": "goodwin"
+        },
+        {
+          "id": 1,
+          "username": "pouros"
+        },
+        {
+          "id": 1,
+          "username": "pouros"
+        },
+        {
+          "id": 1,
+          "username": "pouros"
+        },
+        {
+          "id": 1,
+          "username": "pouros"
+        },
+        {
+          "id": 1,
+          "username": "pouros"
+        },
+        {
+          "id": 1,
+          "username": "pouros"
+        },
+        {
+          "id": 1,
+          "username": "pouros"
         }
       ]
     },
@@ -23,16 +51,16 @@
       "img_url": "http://books.google.com/books/content?id=pkwCDAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "users": [
         {
-          "id": 10,
-          "username": "macejkovic"
+          "id": 2,
+          "username": "auer"
         },
         {
-          "id": 4,
-          "username": "batz"
+          "id": 8,
+          "username": "goodwin"
         },
         {
-          "id": 6,
-          "username": "steuber"
+          "id": 1,
+          "username": "pouros"
         }
       ]
     },
@@ -43,12 +71,16 @@
       "img_url": "http://books.google.com/books/content?id=xTSmAgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "users": [
         {
+          "id": 2,
+          "username": "auer"
+        },
+        {
           "id": 8,
           "username": "goodwin"
         },
         {
-          "id": 9,
-          "username": "nikolaus"
+          "id": 1,
+          "username": "pouros"
         }
       ]
     },
@@ -65,6 +97,10 @@
         {
           "id": 8,
           "username": "goodwin"
+        },
+        {
+          "id": 1,
+          "username": "pouros"
         }
       ]
     },
@@ -85,6 +121,10 @@
         {
           "id": 8,
           "username": "goodwin"
+        },
+        {
+          "id": 1,
+          "username": "pouros"
         }
       ]
     },
@@ -101,6 +141,14 @@
         {
           "id": 4,
           "username": "batz"
+        },
+        {
+          "id": 1,
+          "username": "pouros"
+        },
+        {
+          "id": 1,
+          "username": "pouros"
         }
       ]
     },
